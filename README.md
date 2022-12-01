@@ -7,4 +7,4 @@ I have made solution videos for every challenge listed below.
 
 | Day # | Title | Difficulty  | Youtube Video |
 | ---   | ---   | ---         | ---           |
-| #     | test title | TEST        | https://www.youtube.com/test |
+| 1     | Calorie Counting | EASY        | https://www.youtube.com/test |
