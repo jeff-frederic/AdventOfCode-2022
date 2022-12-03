@@ -20,9 +20,14 @@ for item in data:
         count += num    # Adding to the count if its a number
 
     # Finding max values
+    # EDIT: We need to shift the previous max values found
+    # before setting new values!!
     if count > max: 
-        max = count     # Elf with most calories
+        max3 = max2
+        max2 = max
+        max = count
     elif count > max2:
+        max3 = max2
         max2 = count    # Elf with second to most 
     elif count > max3:
         max3 = count    # Elf with third to most 
