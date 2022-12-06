@@ -1,56 +1,68 @@
 from string import ascii_uppercase
 
+# Getting input
 with open('day5.in') as file:
-    stack_strings, instructions = (i.split('\n') for i in file.read().strip('\n').split('\n\n'))
+    stack_strings, instructions = (i.splitlines() for i in file.read().strip('\n').split('\n\n'))
 
-
-# Initializing a dictionary where we will put all of our chars (crates)
+"""
+'stacks' is a dictionary that will store {stack number}:{[characters in stack]}
+'indexes' is a list that stores the indexes in which the characters needed to fill 
+    the stacks will be found. 
+"""
 stacks = {int(digit):[] for digit in stack_strings[-1].replace(" ","")}
+indexes = [index for index, char in enumerate(stack_strings[-1]) if char != " "]
 
-# Helper function to view what's inside the stacks
+# Used to display the contents in each stack
 def displayStacks():
     print("\n\nStacks:\n")
     for stack in stacks:
         print(stack, stacks[stack])
     print("\n")
 
-def displayStackInput():
-    for stack in stack_strings:
-        print(stack)
 
-# Indexes in which the chars (crates) will be found
-indexes = [index for index, char in enumerate(stack_strings[-1]) if char != " "]
+# Loading the stacks off the input
+def loadStacks():
+    for string in stack_strings[:-1]:
+        stack_num = 1
+        for index in indexes:
+            if string[index] == " ":
+                pass
+            else:
+                stacks[stack_num].insert(0, string[index])
+            stack_num += 1
 
-# Adding the crates to the appropriate stack
-for string in stack_strings[:-1]:
-    stack_num = 1
-    for index in indexes:
-        if string[index] == " ":
-            pass
-        else:
-            stacks[stack_num].insert(0, string[index])
-        stack_num += 1
+# Clearing the lists in every stack 
+def emptyStacks():
+    for stack_num in stacks:
+        stacks[stack_num].clear()
 
+# Used to get the characters at the end of every stack 
+def getStackEnds():
+    answer = ""
+    for stack in stacks:
+        answer += stacks[stack][-1]
+    return answer
 
 # === PART 1 ===
-# for instruction in instructions:
-#     instruction = instruction.replace("move", "").replace("from ", "").replace("to ", "").strip().split(" ")
-#     instruction = [int(i) for i in instruction]
+loadStacks()
+for instruction in instructions:
+    instruction = instruction.replace("move", "").replace("from ", "").replace("to ", "").strip().split(" ")
+    instruction = [int(i) for i in instruction]
 
-#     crates = instruction[0]
-#     from_stack = instruction[1]
-#     to_stack = instruction[2]
+    crates = instruction[0]
+    from_stack = instruction[1]
+    to_stack = instruction[2]
 
-#     for crate in range(crates):
-#         crate_removed = stacks[from_stack].pop()
-#         stacks[to_stack].append(crate_removed)
+    for crate in range(crates):
+        crate_removed = stacks[from_stack].pop()
+        stacks[to_stack].append(crate_removed)
 
-# answer = ""
-# for stack in stacks:
-#     answer += stacks[stack][-1]
+print("Answer to part 1: ", getStackEnds())
 
 
 # === PART 2 ===
+emptyStacks()
+loadStacks()
 for instruction in instructions:
     instruction = instruction.replace("move", "").replace("from ", "").replace("to ", "").strip().split(" ")
     instruction = [int(i) for i in instruction]
@@ -61,10 +73,9 @@ for instruction in instructions:
 
     crates_to_remove = stacks[from_stack][-crates:]
     stacks[from_stack] = stacks[from_stack][:-crates]
-    stacks[to_stack].append(crates_to_remove)
-    print(instruction, crates_to_remove)
 
+    for crate in crates_to_remove:
+        stacks[to_stack].append(crate)
 
-
-displayStacks()
+print("Answer to part 2: ", getStackEnds())
 
