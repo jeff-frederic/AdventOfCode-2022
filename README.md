@@ -12,4 +12,4 @@ I have made solution videos for every challenge listed below.
 | 3     | Rucksack Reorganization | EASY | https://youtu.be/CJsMYNrE-aE |
 | 4 | Camp Cleanup | EASY | https://youtu.be/NZOJkxVXi7o |
 | 5 | Supply Stacks | EASYish | https://youtu.be/LvH2DU1bARk |
-| 6 | Tuning Trouble | EASY | NONE |
+| 6 | Tuning Trouble | EASY | https://youtu.be/7iaZzf7rdmQ |
