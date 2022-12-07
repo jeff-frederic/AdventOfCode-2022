@@ -10,5 +10,6 @@ I have made solution videos for every challenge listed below.
 | 1     | Calorie Counting | EASY        | https://youtu.be/xqilQUL_JDk |
 | 2     | Rock Paper Scissors | EASY     | https://youtu.be/EcL5nwiUVtg |
 | 3     | Rucksack Reorganization | EASY | https://youtu.be/CJsMYNrE-aE |
-| 4 | Camp Cleanup | EASY | NONE (yet) |
-| 5 | Supply Stacks | EASYish | NONE (yet) |
+| 4 | Camp Cleanup | EASY | https://youtu.be/NZOJkxVXi7o |
+| 5 | Supply Stacks | EASYish | https://youtu.be/LvH2DU1bARk |
+| 6 | Tuning Trouble | EASY | NONE |
