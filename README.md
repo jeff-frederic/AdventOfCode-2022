@@ -13,4 +13,4 @@ I have made solution videos for every challenge listed below.
 | 4 | Camp Cleanup | EASY | https://youtu.be/NZOJkxVXi7o |
 | 5 | Supply Stacks | EASYish | https://youtu.be/LvH2DU1bARk |
 | 6 | Tuning Trouble | EASY | https://youtu.be/7iaZzf7rdmQ |
-| 7 | No Space Left On Device | EASYish | NONE | 
+| 7 | No Space Left On Device | EASYish | https://youtu.be/FXQWIWHaFBE | 
