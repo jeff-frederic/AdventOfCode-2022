@@ -14,4 +14,4 @@ I have made solution videos for every challenge listed below.
 | 5 | Supply Stacks | EASYish | https://youtu.be/LvH2DU1bARk |
 | 6 | Tuning Trouble | EASY | https://youtu.be/7iaZzf7rdmQ |
 | 7 | No Space Left On Device | EASYish | https://youtu.be/FXQWIWHaFBE |
-| 8 | Treetop Tree House | | EASY | NONE | 
+| 8 | Treetop Tree House | EASY | NONE (yet) |
