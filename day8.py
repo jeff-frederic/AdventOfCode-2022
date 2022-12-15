@@ -7,7 +7,7 @@ COLUMNS = len(data[0])      # num of columns
 
 edges = (ROWS*2) + ((COLUMNS-2)*2)      # all trees on edges are visible
 total = edges                           # add edges to total visible trees
-scores = []
+scores = []                             # track the scenic scores
 
 # Iterate through trees not on edges
 for row in range(1, ROWS-1):
