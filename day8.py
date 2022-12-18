@@ -34,10 +34,8 @@ for row in range(1, ROWS-1):
             for i in range(len(lst)):
                 if lst[i] < tree:
                     tracker += 1
-                elif lst[i] == tree:
+                elif lst[i] >= tree:
                     tracker += 1
-                    break
-                else:
                     break
             
             score *= tracker
